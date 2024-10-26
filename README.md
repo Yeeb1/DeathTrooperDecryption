@@ -8,7 +8,7 @@
 >  
 > — [Wookieepedia - Death trooper encryption](https://starwars.fandom.com/wiki/Death_trooper_encryption)
 
-#### [🔊 Death Trooper Voice Encryption](https://www.youtube.com/watch?v=DXn-Adclwy4)
+#### [🔊 Death Trooper Voice Encryption in action](https://www.youtube.com/watch?v=DXn-Adclwy4)
 
 
 ## Description
