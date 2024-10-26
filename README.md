@@ -90,7 +90,7 @@ The script decrypts the payload using the following steps:
 In **Stage 1** of Empire's staging process, the agent establishes a secure channel with the C2 server by generating an RSA key pair. The public key from this pair is sent to the server, allowing for secure key exchange. Recovering the RSA public key from this exchange is essential for monitoring or analyzing the session’s encryption, and the modulus extracted from this key can be used with [CovenantDecryptor](https://github.com/naacbin/CovenantDecryptor) to recover the private key from the agent’s process, either via a live capture or memory dump.
 
 The **Stage 1 Key Exchange Decryption Script** (`stage1_keyexchange.py`) enables users to:
-1. Retrieve the agent's RSA public key from the Empire C2 server's response.
+1. Retrieve the RSA public key that is generated withtin the agents process and send to the Empire C2 server for the final stage of communication.
 2. Extract the modulus of the RSA key, which can then be used with CovenantDecryptor to recover the private key.
 
 #### Usage
