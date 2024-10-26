@@ -207,3 +207,57 @@ The Stage 2 decryption process involves the following steps:
 This stage allows security analysts to view the full scope of agent interactions with the C2 server, including encrypted command output, making it a vital part of decrypting and analyzing Empire’s command-and-control communications.
 
 
+### Misc: session_cookie_decode.py
+
+The `session_cookie_decode.py` script provides a quick sanity check to decrypt the session cookie sent by the agent. This enables the user to get a snapshot of the current execution stage and identify any active command tasks or responses in progress within the Empire C2 framework.
+
+#### Usage
+
+To run the script, provide the *staging key* along with the *Base64-encoded cookie* value sent by the agent. Below is an example of how to execute the script:
+
+```bash
+python3 session_cookie_decode.py -k '5gX2$Ab!9Zr^1L@8hQ' -c 'pf89Gh25Bl03Hn67Lk50MnArSxP=' 
+
+Decrypted Cookie Information:
+=============================
+Session ID : X1PT8H2M
+Language   : 1 (POWERSHELL)
+Meta       : 4 (TASKING_REQUEST)
+Extra Data : 0000
+Data Length: 0
+
+```
+
+
+### Misc: stage1_modulus.py
+
+The `stage1_modulus.py` script is a standalone utility designed to retrieve the RSA modulus from an RSA XML key structure. This tool is particularly useful for extracting the modulus value embedded in RSAKeyValue XML files exchanged between the agent and the C2 server.
+
+#### Usage
+
+To run the script, specify the path to an RSA XML file with the `--file` argument, as demonstrated below:
+
+```bash
+python3 stage1_modulus.py --file decrypted_RSA.xml -h
+
+usage: stage1_modulus.py [-h] --file FILE [--verbose]
+
+Extract and print modulus from RSAKeyValue XML file.
+
+options:
+  -h, --help            show this help message and exit
+  --file FILE, -f FILE  Path to the RSAKeyValue XML file
+  --verbose, -v         Enable verbose output for debugging
+
+Example usage: python stage1_modulus.py --file rsa_key.xml
+```
+### Resources & Acknowledgements
+
+This tool suite draws on insights and references from various sources, including contributions to the Empire C2 project and in-depth network security research. Special thanks to the following resources:
+
+- [Empire Packets Module](https://github.com/BC-SECURITY/Empire/blob/main/empire/server/common/packets.py): Provided foundational code for handling Empire packet structures.
+- [Empire Agent PowerShell Script](https://github.com/EmpireProject/Empire/blob/master/data/agent/agent.ps1): Critical in understanding the PowerShell-based agent execution and encryption.
+- [Keysight Technologies Blog: Empire C2 - Networking into the Dark Side](https://www.keysight.com/blogs/en/tech/nwvs/2021/06/16/empire-c2-networking-into-the-dark-side): A detailed analysis of Empire C2’s network communication stages and decryption methods.
+- [ACE-Responder Empire C2 RCE PoC](https://github.com/ACE-Responder/Empire-C2-RCE-PoC): Instrumental in understanding the construction of packet structures and application of encryption within Empire, this proof of concept was invaluable for accurate decryption and data retrieval.
+
+
