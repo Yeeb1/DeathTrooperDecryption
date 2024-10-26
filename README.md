@@ -13,7 +13,7 @@
 
 ## Description
 
-The **DeathTrooperDecryption** toolkit is a specialized suite of helper tools designed to facilitate the analysis and understanding of agent communication within the [**Empire C2 framework**](https://github.com/BC-SECURITY/Empire). The suite provides capabilities to decrypt and inspect various phases of communication between the Empire C2 server and its agents, including:
+The **DeathTrooperDecryption** repo is a specialized suite of helper tools designed to facilitate the analysis and understanding of agent communication within the [**Empire C2 framework**](https://github.com/BC-SECURITY/Empire). The suite provides capabilities to decrypt and inspect various phases of communication between the Empire C2 server and its agents, including:
 
 - **Staging Phase**: During the initial connection setup, the agent attempts to establish communication with the C2 server. The toolkit enables the decryption of key exchanges that occur during this phase, which are essential for securing subsequent communications.
 - **Command Execution Phase**: Once the agent is staged, the Empire server can issue commands and receive responses, as well as execute post-exploitation modules. The tools here decrypt traffic for both these tasks and any returned results, enabling an in-depth view of communication patterns.
