@@ -8,6 +8,9 @@
 >  
 > — [Wookieepedia - Death trooper encryption](https://starwars.fandom.com/wiki/Death_trooper_encryption)
 
+#### [🔊 Death Trooper Voice Encryption](https://www.youtube.com/watch?v=DXn-Adclwy4)
+
+
 ## Description
 
 The **DeathTrooperDecryption** toolkit is a specialized suite of helper tools designed to facilitate the analysis and understanding of agent communication within the [**Empire C2 framework**](https://github.com/BC-SECURITY/Empire). The suite provides capabilities to decrypt and inspect various phases of communication between the Empire C2 server and its agents, including:
