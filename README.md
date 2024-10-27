@@ -1,7 +1,7 @@
 # DeathTrooperDecryption
 
 <p align="center">
-  <img src="/img/DT_Encryption_Empire_Ascendant.webp" width="400">
+  <img src="/img/xZGkVD7.jpg" width="400">
 </p>
 
 > *Death trooper encryption was a language used by the Galactic Empire's elite death troopers. The troopers spoke the language using voice-scramblers built into their helmets, allowing them to communicate with each other without anyone being able to decipher what they were saying, as well as enhance their intimidating image.*  
